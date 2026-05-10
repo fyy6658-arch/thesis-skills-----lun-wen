@@ -5,3 +5,4 @@ Personal skills collection for Claude Code.
 ## Skills
 
 - [thesis-math-formatting](./thesis-math-formatting/SKILL.md) — 中文工科论文数学公式格式化，将 OMML 公式中的变量设为 Times New Roman 斜体，上下标/单位设为 Times New Roman 正体
+- [reference-reordering](./reference-reordering/SKILL.md) — 中文论文参考文献按正文首次出现顺序重排，更新引用编号并设置宋体字体
