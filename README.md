@@ -1,6 +1,6 @@
 # Claude Code Skills
 
-中文工科论文排版相关的 Claude Code Skills 集合。
+中文工科论文排版相关的 Claude Code Skills 集合，以及毕业答辩 PPT 自动生成脚本。
 
 ## Skills
 
@@ -11,11 +11,26 @@
 | [math-comma-fix](./math-comma-fix/SKILL.md) | 修复公式逗号（英文改中文、正体、角标去逗号） | "公式逗号改中文"、"角标去掉逗号" |
 | [reference-reordering](./reference-reordering/SKILL.md) | 参考文献按正文首次出现顺序重排，更新引用编号并设置宋体字体 | "给参考文献排序"、"重排参考文献" |
 
-## 使用方式
+## PPT 生成脚本
 
-这些 skill 用于处理中文工科论文 `.docx` 文件。在 Claude Code 中触发对应关键词即可使用。
+使用 [pptxgenjs](https://github.com/nicehash/pptxgenjs) 自动生成毕业答辩 PPT。
+
+| 脚本 | 说明 |
+|------|------|
+| [create_thesis_ppt.js](./create_thesis_ppt.js) | 10 页学术蓝主题答辩 PPT，含封面、目录、内容页 |
+| [generate_ppt.js](./generate_ppt.js) | 14 页深蓝主题答辩 PPT，含完整论文结构 |
+
+### 使用方式
+
+```bash
+npm install pptxgenjs
+node create_thesis_ppt.js  # 生成 create_thesis_ppt.pptx
+node generate_ppt.js       # 生成 纯电动汽车动力传动系统参数匹配与优化_答辩PPT.pptx
+```
+
+修改脚本中的标题、内容、配色即可生成自己的答辩 PPT。
 
 ## 依赖
 
-- `docx` skill（用于解包/打包 .docx 文件）
-- Python 3.x（用于 XML 处理）
+- Python 3.x（论文格式化 skill 使用）
+- Node.js + pptxgenjs（PPT 生成脚本使用）
