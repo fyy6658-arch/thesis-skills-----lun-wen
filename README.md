@@ -11,6 +11,23 @@
 | [math-comma-fix](./math-comma-fix/SKILL.md) | 修复公式逗号（英文改中文、正体、角标去逗号） | "公式逗号改中文"、"角标去掉逗号" |
 | [reference-reordering](./reference-reordering/SKILL.md) | 参考文献按正文首次出现顺序重排，更新引用编号并设置宋体字体 | "给参考文献排序"、"重排参考文献" |
 
+## Python 脚本
+
+| 脚本 | 功能 |
+|------|------|
+| [reorder_refs.py](./reorder_refs.py) | 参考文献重排脚本：扫描正文引用顺序，重排参考文献段落，更新所有 `[N]` 引用编号，设置宋体字体 |
+
+### 使用方式
+
+```bash
+# 修改脚本中的输入输出路径
+input_docx = '你的论文.docx'
+output_docx = '你的论文_reordered.docx'
+
+# 运行
+python reorder_refs.py
+```
+
 ## PPT 生成脚本
 
 使用 [pptxgenjs](https://github.com/nicehash/pptxgenjs) 自动生成毕业答辩 PPT。
@@ -25,12 +42,12 @@
 ```bash
 npm install pptxgenjs
 node create_thesis_ppt.js  # 生成 create_thesis_ppt.pptx
-node generate_ppt.js       # 生成 纯电动汽车动力传动系统参数匹配与优化_答辩PPT.pptx
+node generate_ppt.js       # 生成答辩PPT.pptx
 ```
 
 修改脚本中的标题、内容、配色即可生成自己的答辩 PPT。
 
 ## 依赖
 
-- Python 3.x（论文格式化 skill 使用）
+- Python 3.x（论文格式化 skill + 脚本使用）
 - Node.js + pptxgenjs（PPT 生成脚本使用）
